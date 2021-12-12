@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:anrdoid = "http://schemas.android.com/apk/res/android">
+    <solid
+        anrdoid:color="#fff"/>
+    <corners
+        anrdoid:radius="10dp"/>
+    <padding
+        anrdoid:left="0dp"
+        anrdoid:right="0dp"
+        anrdoid:bottom="0dp"
+        anrdoid:top="0dp"/>
+</shape>
