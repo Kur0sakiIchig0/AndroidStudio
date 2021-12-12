@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/flag"
+            android:layout_width="30dp"
+            android:layout_height="25dp"
+            android:src="@drawable/flag" />
+
+        <TextView
+            android:id="@+id/valuta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="@string/usd"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/shifr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/America"
+            android:textColor="@color/purple_700"
+            android:layout_marginTop="30dp"
+            android:textSize="11sp"/>
+
+
+        <TextView
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="64,95"
+            android:textColor="@color/purple_700"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/up"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/up"
+            android:layout_marginLeft="210dp"
+            android:layout_marginTop="13dp"/>
+
+        <TextView
+            android:id="@+id/prodaja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            android:text="64,95"
+            android:textColor="@color/purple_700"
+            android:layout_marginLeft="330dp"
+            android:layout_marginTop="15dp"/>
+
+        <ImageView
+            android:id="@+id/down"
+            android:layout_width="13dp"
+            android:layout_height="13dp"
+            android:src="@drawable/down"
+            android:layout_marginLeft="365dp"
+            android:layout_marginTop="18dp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
