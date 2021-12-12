@@ -1,0 +1,45 @@
+package com.example.worldskills;
+
+import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ListActivity extends AppCompatActivity {
+
+    private List<State> states = new ArrayList();
+
+    ListView countriesList;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.list_view);
+
+        setInitialData();
+        countriesList = (ListView) findViewById(R.id.countriesList);
+        StateAdapter stateAdapter = new StateAdapter(this, R.layout.kursi_valut, states);
+        countriesList.setAdapter(stateAdapter);
+
+        AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
+                State selectedState = (State)parent.getItemAtPosition(position);
+            }
+        };
+        countriesList.setOnItemClickListener(itemListener);
+    }
+    private void setInitialData() {
+        states.add(new State("USD", "Американский доллар", "65.4", "75.4", R.drawable.flag, R.drawable.up, R.drawable.down));
+        states.add(new State("USD", "Американский доллар", "65.4", "75.4", R.drawable.flag, R.drawable.up, R.drawable.down));
+        states.add(new State("USD", "Американский доллар", "65.4", "75.4", R.drawable.flag, R.drawable.up, R.drawable.down));
+        states.add(new State("USD", "Американский доллар", "65.4", "75.4", R.drawable.flag, R.drawable.up, R.drawable.down));
+        states.add(new State("USD", "Американский доллар", "65.4", "75.4", R.drawable.flag, R.drawable.up, R.drawable.down));
+        states.add(new State("USD", "Американский доллар", "65.4", "75.4", R.drawable.flag, R.drawable.up, R.drawable.down));
+    }
+}

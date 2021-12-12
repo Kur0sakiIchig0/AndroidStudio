@@ -1,0 +1,52 @@
+package com.example.worldskills;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import java.util.List;
+
+public class StateAdapter extends ArrayAdapter<State> {
+
+    private LayoutInflater inflater;
+    private int layout;
+    private List<State> states;
+
+    public StateAdapter(Context context, int resource, List<State> states) {
+        super(context, resource, states);
+        this.states = states;
+        this.layout = resource;
+        this.inflater = LayoutInflater.from(context);
+    }
+
+    public View getView(int position, View convertView, ViewGroup parent) {
+
+        View view = inflater.inflate(this.layout, parent, false);
+
+        ImageView flagView = (ImageView) view.findViewById(R.id.flag);
+        ImageView upView = (ImageView) view.findViewById(R.id.up);
+        ImageView downView = (ImageView) view.findViewById(R.id.down);
+
+        TextView valutaView = (TextView) view.findViewById(R.id.valuta);
+        TextView shifrView = (TextView) view.findViewById(R.id.shifr);
+        TextView payView = (TextView) view.findViewById(R.id.pay);
+        TextView prodajaView = (TextView) view.findViewById(R.id.prodaja);
+
+        State state = states.get(position);
+
+        flagView.setImageResource(state.getFlag());
+        upView.setImageResource(state.getUp());
+        downView.setImageResource(state.getDown());
+
+        valutaView.setText(state.getValuta());
+        shifrView.setText(state.getShifr());
+        payView.setText(state.getPay());
+        prodajaView.setText(state.getProdaja());
+
+        return view;
+    }
+}

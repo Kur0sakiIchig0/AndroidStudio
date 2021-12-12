@@ -1,0 +1,87 @@
+package com.example.worldskills;
+
+public class State {
+
+    private String valuta;
+    private String shifr;
+    private String pay;
+    private String prodaja;
+
+    private int flag;
+    private int up;
+    private int down;
+
+    public State(String valuta, String shifr, String pay, String prodaja,
+                 int flag, int up, int down) {
+
+        this.valuta = valuta;
+        this.shifr = shifr;
+        this.pay = pay;
+        this.prodaja = prodaja;
+
+        this.flag = flag;
+        this.up = up;
+        this.down = down;
+    }
+
+    public String getValuta(){
+        return this.valuta;
+    }
+    public void setValuta(String valuta){
+        this.valuta = valuta;
+    }
+
+
+
+    public String getShifr(){
+        return this.shifr;
+    }
+    public void setShifr(String shifr){
+        this.shifr = shifr;
+    }
+
+
+
+    public String getPay(){
+        return this.pay;
+    }
+    public void setPay(String pay){
+        this.pay = pay;
+    }
+
+
+
+    public String getProdaja(){
+        return this.prodaja;
+    }
+    public void setProdaja(String prodaja){
+        this.prodaja = prodaja;
+    }
+
+
+
+    public int getFlag(){
+        return this.flag;
+    }
+    public void setFlag(int flag){
+        this.flag = flag;
+    }
+
+
+
+    public int getUp(){
+        return this.up;
+    }
+    public void setUp(int up){
+        this.up = up;
+    }
+
+
+
+    public int getDown(){
+        return this.down;
+    }
+    public void setDown(int down){
+        this.down = down;
+    }
+}
